@@ -262,29 +262,65 @@ input[type="number"]:focus {
   font-size: 22px;
 }
 
-.minute-input {
+.hm-input {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background: white;
-  border-radius: 12px;
-  padding: 4px 12px 4px 4px;
+  border-radius: 14px;
+  padding: 4px 8px;
 }
 
-.minute-input input {
-  width: 80px;
+.hm-group {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.hm-input input {
+  width: 52px;
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
-  padding: 6px 8px;
-  font-weight: 700;
+  padding: 6px 4px;
+  font-weight: 800;
+  font-size: 17px;
   text-align: right;
 }
 
-.minute-input .min {
+.hm-input input::-webkit-outer-spin-button,
+.hm-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hm-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hm-unit {
   color: var(--text-soft);
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.slot-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slot-title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.slot-time {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-soft);
+  letter-spacing: 0.3px;
 }
 
 .bedtime-pill {
@@ -380,6 +416,6 @@ input[type="number"]:focus {
   .emoji-big { font-size: 28px; }
   .row { grid-template-columns: 1fr; }
   .slot { flex-direction: column; align-items: stretch; }
-  .minute-input { align-self: flex-end; }
+  .hm-input { align-self: flex-end; }
   .time-value { font-size: 22px; }
 }
